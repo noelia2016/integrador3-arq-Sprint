@@ -3,11 +3,15 @@ package com.example.demo.repository;
 import java.util.List;
 import com.example.demo.entity.Estudiante;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
 
 
 // public class EstudianteRepo {
 public interface EstudianteRepo extends JpaRepository<Estudiante,Long>{
 	
+
+	@Query("SELECT e FROM Estudiante e WHERE e.genero LIKE %:gen% ORDER BY e.apellido, e.nombre")
+	public List<Estudiante> xGenero(String gen);
 
 
 	// public List<Estudiante> findAll() {

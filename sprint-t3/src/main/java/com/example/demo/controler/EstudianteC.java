@@ -32,6 +32,10 @@ public class EstudianteC {
     public Optional<Estudiante> estudianteXlibreta(@PathVariable Long id) {
         return repo.findById(id);
     }
+    @GetMapping("/s/{sexo}")
+    public List<Estudiante> xGenero(@PathVariable String sexo){
+        return repo.xGenero(sexo);
+    }
 
     @PostMapping
     public void grabarEstudiante(@RequestBody Estudiante e) {
