@@ -12,6 +12,9 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface CarreraRepo extends JpaRepository<Carrera,Long>{
 
+	@Query("SELECT c FROM Carrera c WHERE c.nombre LIKE %:nombre%")
+	public Carrera xNombre(String nombre);
+	
 	@Query("SELECT NEW com.example.demo.dtos.CarreraConCantidadDTO(c , SIZE(c.estudiantes)) FROM Carrera c ORDER BY SIZE(c.estudiantes)")
 	List<CarreraConCantidadDTO> listaCarrerasConInscriptos();
 

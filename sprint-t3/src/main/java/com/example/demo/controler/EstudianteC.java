@@ -13,6 +13,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.demo.entity.Carrera;
+import com.example.demo.repository.CarreraRepo;
 import com.example.demo.entity.Estudiante;
 import com.example.demo.repository.EstudianteRepo;
 
@@ -22,6 +24,9 @@ public class EstudianteC {
 
     @Autowired
     private EstudianteRepo repo;
+
+    @Autowired
+    private CarreraRepo carreraRepo;
 
     @GetMapping
     public List<Estudiante> listarEstudiantes() {
@@ -41,5 +46,14 @@ public class EstudianteC {
     public void grabarEstudiante(@RequestBody Estudiante e) {
         repo.save(e);
     }
+
+    @GetMapping("/{nombre_carrera}/{ciudad}")
+    public List<Estudiante> filtrar (@PathVariable String nombre_carrera, @PathVariable String ciudad){
+        System.out.println("buscando"+nombre_carrera+" "+ciudad);
+        Carrera c=carreraRepo.xNombre(nombre_carrera);
+        System.out.println("carera encontrada "+ c.getNombre());
+        return repo.filtrar(c, ciudad);
+    }
+
 
 }
