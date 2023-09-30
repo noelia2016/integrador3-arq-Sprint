@@ -1,13 +1,22 @@
 package com.example.demo.repository;
 
-import java.util.ArrayList;
 import java.util.List;
 
+import com.example.demo.dtos.CarreraConCantidadDTO;
 import com.example.demo.entity.Carrera;
 import org.springframework.data.jpa.repository.JpaRepository;
 // import org.springframework.stereotype.Repository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public interface CarreraRepo extends JpaRepository<Carrera,Long>{
+
+	@Query("SELECT NEW com.example.demo.dtos.CarreraConCantidadDTO(c , SIZE(c.estudiantes)) FROM Carrera c ORDER BY SIZE(c.estudiantes)")
+	List<CarreraConCantidadDTO> listaCarrerasConInscriptos();
+
+	// @Query("SELECT c FROM Carrera c ORDER BY SIZE(c.estudiantes)")
+	// public List<Carrera> listarCarrerasConInscriptos();
 
 	
 

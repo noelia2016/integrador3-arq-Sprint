@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.demo.dtos.CarreraConCantidadDTO;
 import com.example.demo.entity.Carrera;
 import com.example.demo.repository.CarreraRepo;
 
@@ -27,6 +28,16 @@ public class CarreraC {
     public void grabarCarrera(@RequestBody Carrera c){
         repo.save(c);
     }
+
+    @GetMapping("/anotados")
+    public List<CarreraConCantidadDTO> listarCarrerasConInscriptos() {
+        return repo.listaCarrerasConInscriptos();
+    }
+
+    // @GetMapping("/anotados")
+    // public List<Carrera> listarCarrerasConInscriptos() {
+    //     return repo.listarCarrerasConInscriptos();
+    // }
 
 
 

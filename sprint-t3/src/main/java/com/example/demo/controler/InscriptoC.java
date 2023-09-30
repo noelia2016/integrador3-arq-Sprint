@@ -20,6 +20,8 @@ import com.example.demo.entity.Inscripto;
 import com.example.demo.repository.CarreraRepo;
 import com.example.demo.repository.EstudianteRepo;
 import com.example.demo.repository.InscriptoRepo;
+import org.springframework.web.bind.annotation.RequestParam;
+
 
 @RestController
 @RequestMapping("/inscripto")
@@ -46,5 +48,10 @@ public class InscriptoC {
         Inscripto i = new Inscripto(e.get(), c.get(), (int) json.get("fecha"));
         return repo.save(i);
     }
+
+   
+    
+
+
 
 }

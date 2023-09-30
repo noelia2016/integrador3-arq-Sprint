@@ -20,4 +20,15 @@ public class CarreraConCantidadDTO {
         return "\n" + cantidad + " Inscriptos en: " + carrera.getNombre();
     }
 
+    public Carrera getCarrera() {
+        return carrera;
+    }
+
+   
+
+    public int getCantidad() {
+        return cantidad;
+    }
+
+    
 }
