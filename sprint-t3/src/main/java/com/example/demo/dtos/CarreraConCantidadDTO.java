@@ -1,6 +1,6 @@
 package com.example.demo.dtos;
 
-import com.example.demo.entity.Carrera;
+import com.example.demo.model.Carrera;
 
 public class CarreraConCantidadDTO {
     private Carrera carrera;

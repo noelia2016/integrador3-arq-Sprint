@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.example.demo.dtos.CarreraConCantidadDTO;
 import com.example.demo.dtos.EstudianteCarreraDTO;
-import com.example.demo.entity.Carrera;
+import com.example.demo.model.Carrera;
 import org.springframework.data.jpa.repository.JpaRepository;
 // import org.springframework.stereotype.Repository;
 import org.springframework.data.jpa.repository.Query;

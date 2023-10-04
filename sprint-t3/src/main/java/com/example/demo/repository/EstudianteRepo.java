@@ -2,10 +2,12 @@ package com.example.demo.repository;
 
 import java.util.List;
 
-import com.example.demo.entity.Carrera;
-import com.example.demo.entity.Estudiante;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+
+import com.example.demo.model.Carrera;
+import com.example.demo.model.Estudiante;
 
 
 // public class EstudianteRepo {
@@ -15,8 +17,8 @@ public interface EstudianteRepo extends JpaRepository<Estudiante,Long>{
 	@Query("SELECT e FROM Estudiante e WHERE e.genero LIKE %:gen% ORDER BY e.apellido, e.nombre")
 	public List<Estudiante> xGenero(String gen);
 
-@Query("SELECT e FROM Estudiante e JOIN e.carreras c WHERE c = :carr AND e.ciudad_reside LIKE %:ciudad%")
-public List<Estudiante> filtrar(Carrera carr, String ciudad);
+	@Query("SELECT e FROM Estudiante e JOIN e.carreras c WHERE c = :carr AND e.ciudad_reside LIKE %:ciudad%")
+	public List<Estudiante> filtrar(Carrera carr, String ciudad);
 	// public List<Estudiante> findAll() {
 		// return RepositoryFactory.getEntity_manager()
 				// .createQuery("SELECT e FROM Estudiante e ORDER BY e.id", Estudiante.class).getResultList();

@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.dtos.CarreraConCantidadDTO;
 import com.example.demo.dtos.EstudianteCarreraDTO;
-import com.example.demo.entity.Carrera;
+import com.example.demo.model.Carrera;
 import com.example.demo.repository.CarreraRepo;
 import com.example.demo.repository.EstudianteRepo;
 

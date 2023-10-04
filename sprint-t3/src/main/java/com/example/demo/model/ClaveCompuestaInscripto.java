@@ -1,14 +1,14 @@
-package com.example.demo.entity;
+package com.example.demo.model;
 
 import java.io.Serializable;
 
 
-public class claveCompuestaInscripto implements Serializable{
+public class ClaveCompuestaInscripto implements Serializable{
     private Estudiante estudiante;
 
 	private Carrera carrera;
 
-    public claveCompuestaInscripto(){}
+    public ClaveCompuestaInscripto(){}
 
     @Override
     public boolean equals(Object obj) {

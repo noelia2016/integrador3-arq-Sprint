@@ -1,8 +1,8 @@
 package com.example.demo.dtos;
 
-import com.example.demo.entity.Carrera;
-import com.example.demo.entity.Estudiante;
-import com.example.demo.entity.Inscripto;
+import com.example.demo.model.Carrera;
+import com.example.demo.model.Estudiante;
+import com.example.demo.model.Inscripto;
 
 public class EstudianteCarreraDTO {
     private Estudiante estudiante;
