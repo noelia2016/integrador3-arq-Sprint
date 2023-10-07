@@ -11,10 +11,12 @@ import jakarta.persistence.OneToMany;
 import lombok.Data;
 import jakarta.persistence.JoinColumn;
 
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity
-@Data
+@Setter
+@Getter
 public class Estudiante {
 	@Id
 	@Column(name = "nro_libreta")
