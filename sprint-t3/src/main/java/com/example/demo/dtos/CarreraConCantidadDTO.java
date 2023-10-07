@@ -3,6 +3,7 @@ package com.example.demo.dtos;
 import com.example.demo.model.Carrera;
 
 public class CarreraConCantidadDTO {
+    
     private Carrera carrera;
     private int cantidad;
 

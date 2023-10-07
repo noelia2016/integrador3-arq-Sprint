@@ -3,10 +3,14 @@ package com.example.demo.model;
 import java.util.List;
 
 import jakarta.persistence.*;
+import lombok.Data;
 
 
 @Entity
+@Data
+
 public class Carrera {
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer id_carrera;
@@ -38,37 +42,7 @@ public class Carrera {
 		this.institucion = institucion;
 	}
 
-	public Integer getId_carrera() {
-		return this.id_carrera;
-	}
-
-	public void setId_carrera(int id_carrera) {
-		this.id_carrera = id_carrera;
-	}
-
-	public String getNombre() {
-		return nombre;
-	}
-
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
-	}
-
-	public int getDuracion() {
-		return duracion;
-	}
-
-	public void setDuracion(int duracion) {
-		this.duracion = duracion;
-	}
-
-	public String getInstitucion() {
-		return institucion;
-	}
-
-	public void setInstitucion(String institucion) {
-		this.institucion = institucion;
-	}
+	
 
 	@Override
 	public String toString() {

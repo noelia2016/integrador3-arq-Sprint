@@ -5,14 +5,17 @@ import com.example.demo.model.Estudiante;
 import com.example.demo.model.Inscripto;
 
 public class EstudianteCarreraDTO {
+
     private Estudiante estudiante;
     private Carrera carrera;
     private Inscripto inscripto;
+    private int fech;
 
     public EstudianteCarreraDTO() {
         super();
     }
-    private int fech;
+
+    
     public EstudianteCarreraDTO(Carrera carrera,Estudiante estudiante, Inscripto inscripto, int fech) {
         this.estudiante = estudiante;
         this.carrera = carrera;

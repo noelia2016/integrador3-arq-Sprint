@@ -8,11 +8,13 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.OneToMany;
+import lombok.Data;
 import jakarta.persistence.JoinColumn;
 
-
+import lombok.Data;
 
 @Entity
+@Data
 public class Estudiante {
 	@Id
 	@Column(name = "nro_libreta")
@@ -59,61 +61,6 @@ public class Estudiante {
 		this.ciudad_reside = ciudad_reside;
 	}
 
-	public Integer getId() {
-		return id;
-	}
-
-	public void setNro_libreta(Integer id) {
-		this.id = id;
-	}
-
-	public String getNombre() {
-		return nombre;
-	}
-
-	public String getApellido() {
-		return apellido;
-	}
-
-	public Integer getNro_doc() {
-		return nro_doc;
-	}
-
-	public Integer getEdad() {
-		return edad;
-	}
-
-	public String getGenero() {
-		return genero;
-	}
-
-	public String getCiudad_reside() {
-		return ciudad_reside;
-	}
-
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
-	}
-
-	public void setApellido(String apellido) {
-		this.apellido = apellido;
-	}
-
-	public void setNro_doc(Integer nro_doc) {
-		this.nro_doc = nro_doc;
-	}
-
-	public void setEdad(Integer edad) {
-		this.edad = edad;
-	}
-
-	public void setGenero(String genero) {
-		this.genero = genero;
-	}
-
-	public void setCiudad_reside(String ciudad_reside) {
-		this.ciudad_reside = ciudad_reside;
-	}
 
 	@Override
 	public String toString() {

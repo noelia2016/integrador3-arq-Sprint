@@ -19,9 +19,20 @@ public class Inscripto {
 	@Column
 	private int fecha;
 
+	@Column
+	private int antiguedad;
+
+	@Column 
+	private Integer esEgresado;
 
 	public Inscripto() {
 		super();
+	}
+
+	public Inscripto(Estudiante e, Carrera c, int fecha) {
+		this.estudiante = e;
+		this.carrera = c;
+		this.fecha = fecha;
 	}
 
 
@@ -33,24 +44,13 @@ public class Inscripto {
 		return esEgresado;
 	}
 
-	@Column
-	private int antiguedad;
-
+	
 	public void setAntiguedad(int antiguedad) {
 		this.antiguedad = antiguedad;
 	}
 
 	public void setEsEgresado(Integer esEgresado) {
 		this.esEgresado = esEgresado;
-	}
-
-	@Column 
-	private Integer esEgresado;
-
-	public Inscripto(Estudiante e, Carrera c, int fecha) {
-		this.estudiante = e;
-		this.carrera = c;
-		this.fecha = fecha;
 	}
 
 	public int getfecha() {

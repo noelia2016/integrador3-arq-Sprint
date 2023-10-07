@@ -40,8 +40,11 @@ public class CarreraC {
         return repo.listaCarrerasConInscriptos();
     }
 
+
+    // ver este no anda
     @GetMapping("/reporte")
     public List<EstudianteCarreraDTO> reportar(){
+
         List<EstudianteCarreraDTO> listaCarreras=repo.listaDeIngresos();
         listaCarreras.addAll(repo.listaDeEgresos());
         listaCarreras.sort(Comparator
