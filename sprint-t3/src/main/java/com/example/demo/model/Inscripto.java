@@ -1,12 +1,9 @@
 package com.example.demo.model;
 
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
 
 @Entity
-@Setter
-@Getter
+
 @IdClass(ClaveCompuestaInscripto.class)
 public class Inscripto {
 
@@ -40,7 +37,7 @@ public class Inscripto {
 	}
 
 
-	/*public int getAntiguedad() {
+	public int getAntiguedad() {
 		return antiguedad;
 	}
 
@@ -69,13 +66,13 @@ public class Inscripto {
 
 	public Carrera getCarrera() {
 		return carrera;
-	}*/
+	}
 
 
-	@Override
+	/*@Override
 	public String toString() {
 		return "Inscripto [estudiante=" + estudiante.getId() + ", carrera=" + carrera.getId_carrera() + ", fecha="
 				+ fecha
 				+ ", anioEgreso=" + (fecha+antiguedad) + "]";
-	}
+	}*/
 }

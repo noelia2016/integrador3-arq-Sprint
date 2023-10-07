@@ -4,11 +4,8 @@ import java.util.List;
 
 import jakarta.persistence.*;
 
-import lombok.Getter;
-import lombok.Setter;
 @Entity
-@Setter
-@Getter
+
 public class Carrera {
 	
 	@Id
@@ -36,6 +33,30 @@ public class Carrera {
 		super();
 	}
 
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public int getDuracion() {
+		return duracion;
+	}
+
+	public void setDuracion(int duracion) {
+		this.duracion = duracion;
+	}
+
+	public String getInstitucion() {
+		return institucion;
+	}
+
+	public void setInstitucion(String institucion) {
+		this.institucion = institucion;
+	}
+
 	public Carrera(String nombre, int duracion, String institucion) {
 		this.nombre = nombre;
 		this.duracion = duracion;
@@ -51,12 +72,3 @@ public class Carrera {
 	}
 
 }
-
-	/*
-	 {
-		"nombre":"arquitectura",
-		"duracion":5,
-		"institucion":"UNICEN"
-	
-	 }
-	 */
