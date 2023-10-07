@@ -39,7 +39,7 @@ public class Estudiante {
 	private String genero;
 
 	@Column(name = "ciudad")
-	private String ciudadReside;
+	private String ciudad_reside;
 
 	@ManyToMany
 	@JoinTable(name = "Inscripto", joinColumns = @JoinColumn(name = "nro_libreta"), inverseJoinColumns = @JoinColumn(name = "carrera"))
@@ -57,7 +57,7 @@ public class Estudiante {
 		this.nro_doc = nro_doc;
 		this.edad = edad;
 		this.genero = genero;
-		this.ciudadReside = ciudadReside;
+		this.ciudad_reside = ciudadReside;
 	}
 
 	public String getNombre() {
@@ -101,11 +101,11 @@ public class Estudiante {
 	}
 
 	public String getCiudadReside() {
-		return ciudadReside;
+		return ciudad_reside;
 	}
 
 	public void setCiudadReside(String ciudad) {
-		this.ciudadReside = ciudad;
+		this.ciudad_reside = ciudad;
 	}
 
 
